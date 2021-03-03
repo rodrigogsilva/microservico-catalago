@@ -28,6 +28,14 @@
 	"extensions": [
 		"bmewburn.vscode-intelephense-client",
 		"calebporzio.better-phpunit",
+		"onecentlin.laravel5-snippets",
+		"streetsidesoftware.code-spell-checker-portuguese-brazilian",
+		"streetsidesoftware.code-spell-checker",
+		"naumovs.color-highlight",
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"visualstudioexptteam.vscodeintellicode"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

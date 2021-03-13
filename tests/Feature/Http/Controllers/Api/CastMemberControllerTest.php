@@ -3,7 +3,6 @@
 namespace Tests\Feature\Http\Controllers\Api;
 
 use App\Models\CastMember;
-use App\Models\Category;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use Tests\Traits\TestSaves;
@@ -100,8 +99,8 @@ class CastMemberControllerTest extends TestCase
         $response = $this->json('DELETE', route('cast_members.destroy', ['cast_member' => $this->castMember->id]));
         $response->assertStatus(204);
 
-        $this->assertNull(Category::find($this->castMember->id));
-        $this->assertNotNull(Category::withTrashed()->find($this->castMember->id));
+        $this->assertNull(CastMember::find($this->castMember->id));
+        $this->assertNotNull(CastMember::withTrashed()->find($this->castMember->id));
     }
 
     protected function routeStore()
@@ -116,6 +115,6 @@ class CastMemberControllerTest extends TestCase
 
     protected function model()
     {
-        return Category::class;
+        return CastMember::class;
     }
 }
